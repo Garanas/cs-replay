@@ -1,0 +1,32 @@
+﻿<Project>
+    <PropertyGroup>
+        <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- Blazor WASM -->
+        <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="10.0.0-preview.1.25120.3" />
+        <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="10.0.0-preview.1.25120.3" />
+
+        <!-- UI -->
+        <PackageVersion Include="MudBlazor" Version="7.8.0" />
+        <PackageVersion Include="Phork.Blazor.Reactivity" Version="1.1.2" />
+
+        <!-- Compression -->
+        <PackageVersion Include="SharpZipLib" Version="1.4.2" />
+        <PackageVersion Include="ZstdSharp.Port" Version="0.8.1" />
+
+        <!-- Benchmarking -->
+        <PackageVersion Include="BenchmarkDotNet" Version="0.14.0" />
+
+        <!-- CLI -->
+        <PackageVersion Include="CommandLineParser" Version="2.9.1" />
+
+        <!-- Testing -->
+        <PackageVersion Include="coverlet.collector" Version="6.0.0" />
+        <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+        <PackageVersion Include="MSTest.TestAdapter" Version="3.1.1" />
+        <PackageVersion Include="MSTest.TestFramework" Version="3.1.1" />
+    </ItemGroup>
+
+</Project>
