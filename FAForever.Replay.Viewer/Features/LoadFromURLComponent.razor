@@ -1,6 +1,7 @@
 ﻿@inherits ReactiveComponentBase;
 
 @inject ReplayService replayService;
+@inject IDialogService DialogService;
 @inject HttpClient HttpClient;
 @inject ISnackbar Snackbar;
 
@@ -38,9 +39,15 @@
                 return false;
             }
 
-            var response = await HttpClient.GetByteArrayAsync($"https://replay.faforever.com/{url}");
-            MemoryStream stream = new MemoryStream();
-            //replayService.LoadFAForeverReplay(stream);
+            var response = await HttpClient.GetByteArrayAsync($"api/replay/{url}");
+            MemoryStream stream = new MemoryStream(response);
+            var dialogParameters = new DialogParameters<ReplayLoadDialog> {
+                { x => x.Stream, stream },
+                { x => x.Format, ReplayFormat.FAForever }
+            };
+
+            await DialogService.ShowAsync<ReplayLoadDialog>("Load replay", dialogParameters);
+
             return true;
         }
         catch (Exception ex)

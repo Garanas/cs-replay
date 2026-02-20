@@ -38,7 +38,7 @@
     MudTabPanel semanticsTab;
 
     [CascadingParameter]
-    private MudDialogInstance MudDialog { get; set; }
+    private IMudDialogInstance MudDialog { get; set; }
 
     [Parameter]
     public ReplayFormat Format { get; set; }
@@ -82,9 +82,9 @@
         return "N/A";
     }
 
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
-        this.MudDialog.SetOptions(new DialogOptions() { CloseButton = true, FullWidth = true, MaxWidth = MaxWidth.Medium });
+        await this.MudDialog.SetOptionsAsync(new DialogOptions() { CloseButton = true, FullWidth = true, MaxWidth = MaxWidth.Medium });
     }
 
     private void Cancel() {
@@ -110,7 +110,7 @@
             }
 
             await Task.Delay(1000);
-            tabs.ActivatePanel(this.semanticsTab, true);
+            await tabs.ActivatePanelAsync(this.semanticsTab, true);
 
             ReplayState state = await ComputeReplaySemantics(replay);
             ReplayService.ReplayState = state;
