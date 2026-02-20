@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FAForever.Replay.Benchmark"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FAForever.Replay.Viewer", "FAForever.Replay.Viewer\FAForever.Replay.Viewer.csproj", "{A866CE8D-37CE-4091-90B8-17C13B129F5E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FAForever.Replay.Server", "FAForever.Replay.Server\FAForever.Replay.Server.csproj", "{383AADFA-4ECF-4165-B7FA-637AE9EE6DA1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A866CE8D-37CE-4091-90B8-17C13B129F5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A866CE8D-37CE-4091-90B8-17C13B129F5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A866CE8D-37CE-4091-90B8-17C13B129F5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{383AADFA-4ECF-4165-B7FA-637AE9EE6DA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{383AADFA-4ECF-4165-B7FA-637AE9EE6DA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{383AADFA-4ECF-4165-B7FA-637AE9EE6DA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{383AADFA-4ECF-4165-B7FA-637AE9EE6DA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
